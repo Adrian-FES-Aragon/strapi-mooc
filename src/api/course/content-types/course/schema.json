@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "courses",
+  "info": {
+    "singularName": "course",
+    "pluralName": "courses",
+    "displayName": "Course"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "area": {
+      "type": "string",
+      "required": true
+    },
+    "type": {
+      "type": "boolean",
+      "default": false,
+      "required": true
+    },
+    "language": {
+      "type": "string",
+      "required": true
+    },
+    "profesors": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::profesor.profesor",
+      "inversedBy": "courses"
+    },
+    "c_data": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::c-data.c-data",
+      "mappedBy": "course"
+    },
+    "specials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::special.special",
+      "inversedBy": "courses"
+    }
+  }
+}

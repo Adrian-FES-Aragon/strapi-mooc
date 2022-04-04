@@ -1,0 +1,39 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profesors",
+  "info": {
+    "singularName": "profesor",
+    "pluralName": "profesors",
+    "displayName": "Profesor"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true
+    },
+    "lastname": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "profesors"
+    },
+    "p_data": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::p-data.p-data",
+      "mappedBy": "profesor"
+    }
+  }
+}

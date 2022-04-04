@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "p_datas",
+  "info": {
+    "singularName": "p-data",
+    "pluralName": "p-datas",
+    "displayName": "pData"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UUID": {
+      "type": "uid"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "degree": {
+      "type": "string"
+    },
+    "field": {
+      "type": "string"
+    },
+    "charge": {
+      "type": "string"
+    },
+    "school": {
+      "type": "string"
+    },
+    "biography": {
+      "type": "text"
+    },
+    "profesor": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profesor.profesor",
+      "inversedBy": "p_data"
+    }
+  }
+}

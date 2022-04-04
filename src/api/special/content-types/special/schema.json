@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "specials",
+  "info": {
+    "singularName": "special",
+    "pluralName": "specials",
+    "displayName": "Special"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "courses": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::course.course",
+      "inversedBy": "specials"
+    }
+  }
+}

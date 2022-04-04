@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "c_datas",
+  "info": {
+    "singularName": "c-data",
+    "pluralName": "c-datas",
+    "displayName": "cData"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "UUID": {
+      "type": "uid",
+      "required": false
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "school": {
+      "type": "string"
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "content": {
+      "type": "richtext"
+    },
+    "purpose": {
+      "type": "text"
+    },
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "c_data"
+    }
+  }
+}
