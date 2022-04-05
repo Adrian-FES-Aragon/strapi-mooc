@@ -4,7 +4,8 @@
   "info": {
     "singularName": "special",
     "pluralName": "specials",
-    "displayName": "Special"
+    "displayName": "Special",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,11 +16,11 @@
       "type": "string",
       "required": true
     },
-    "courses": {
+    "types": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::course.course",
-      "inversedBy": "specials"
+      "relation": "oneToMany",
+      "target": "api::type.type",
+      "mappedBy": "special"
     }
   }
 }

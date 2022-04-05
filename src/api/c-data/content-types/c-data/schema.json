@@ -4,7 +4,8 @@
   "info": {
     "singularName": "c-data",
     "pluralName": "c-datas",
-    "displayName": "cData"
+    "displayName": "cData",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -13,7 +14,8 @@
   "attributes": {
     "UUID": {
       "type": "uid",
-      "required": false
+      "required": false,
+      "targetField": "link"
     },
     "link": {
       "type": "string",

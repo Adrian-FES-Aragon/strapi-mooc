@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "types",
+  "info": {
+    "singularName": "type",
+    "pluralName": "types",
+    "displayName": "type"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "course": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::course.course",
+      "inversedBy": "types"
+    },
+    "special": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::special.special",
+      "inversedBy": "types"
+    }
+  }
+}

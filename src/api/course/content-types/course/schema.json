@@ -28,23 +28,23 @@
       "type": "string",
       "required": true
     },
-    "profesors": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::profesor.profesor",
-      "inversedBy": "courses"
-    },
     "c_data": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::c-data.c-data",
       "mappedBy": "course"
     },
-    "specials": {
+    "lessons": {
       "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::special.special",
-      "inversedBy": "courses"
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson",
+      "mappedBy": "course"
+    },
+    "types": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::type.type",
+      "mappedBy": "course"
     }
   }
 }

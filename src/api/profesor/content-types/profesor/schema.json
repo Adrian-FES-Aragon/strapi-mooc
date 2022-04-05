@@ -4,7 +4,8 @@
   "info": {
     "singularName": "profesor",
     "pluralName": "profesors",
-    "displayName": "Profesor"
+    "displayName": "Profesor",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -23,16 +24,16 @@
       "type": "email",
       "required": true
     },
-    "courses": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::course.course",
-      "inversedBy": "profesors"
-    },
     "p_data": {
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::p-data.p-data",
+      "mappedBy": "profesor"
+    },
+    "lessons": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::lesson.lesson",
       "mappedBy": "profesor"
     }
   }
